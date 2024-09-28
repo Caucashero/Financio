@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "521520622441",
+    "project_id": "financi-o-app-lsrf2o",
+    "storage_bucket": "financi-o-app-lsrf2o.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:521520622441:android:a39a24c844ded1b0146bf8",
+        "android_client_info": {
+          "package_name": "com.financio.mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "521520622441-rgqtb4v62p1sb1o3hd79c7t5raap8u82.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.financio.mobile",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "521520622441-0nmo2b60qvc41asl2oqbgavh3cpsuhce.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkS6coLZD6-4Co6yEm-ZyQomZt4q0hffw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "521520622441-0nmo2b60qvc41asl2oqbgavh3cpsuhce.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "521520622441-g7fga9lb0vdpfd9dljng2ftovdab49ju.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.financio.mobile"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
