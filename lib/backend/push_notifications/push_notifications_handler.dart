@@ -1,23 +1,17 @@
 import 'dart:async';
-import 'dart:convert';
 
 import 'serialization_util.dart';
-import '../backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '../../flutter_flow/flutter_flow_util.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 
-import '../../index.dart';
-import '../../main.dart';
 
 final _handledMessageIds = <String?>{};
 
 class PushNotificationsHandler extends StatefulWidget {
-  const PushNotificationsHandler({Key? key, required this.child})
-      : super(key: key);
+  const PushNotificationsHandler({super.key, required this.child});
 
   final Widget child;
 
@@ -78,12 +72,13 @@ class _PushNotificationsHandlerState extends State<PushNotificationsHandler> {
   @override
   Widget build(BuildContext context) => _loading
       ? Container(
-          color: FlutterFlowTheme.of(context).primaryText,
+          color: FlutterFlowTheme.of(context).primary,
           child: Center(
             child: Image.asset(
-              'assets/images/favicon.svg',
-              width: 300.0,
-              fit: BoxFit.fill,
+              'assets/images/Adsz_tasarm.png',
+              width: 250.0,
+              height: double.infinity,
+              fit: BoxFit.contain,
             ),
           ),
         )
@@ -106,7 +101,7 @@ class ParameterData {
       );
 
   static Future<ParameterData> Function(Map<String, dynamic>) none() =>
-      (data) async => ParameterData();
+      (data) async => const ParameterData();
 }
 
 final parametersBuilderMap =
@@ -118,9 +113,14 @@ final parametersBuilderMap =
           'name': getParameter<String>(data, 'name'),
         },
       ),
-  'PairCateogires': ParameterData.none(),
+  'PairCateogiresPage': ParameterData.none(),
   'Profile': ParameterData.none(),
-  'Dashboard': ParameterData.none(),
+  'DashboardPage': ParameterData.none(),
+  'PairDetailPage': (data) async => ParameterData(
+        allParams: {
+          'slug': getParameter<String>(data, 'slug'),
+        },
+      ),
 };
 
 Map<String, dynamic> getInitialParameterData(Map<String, dynamic> data) {

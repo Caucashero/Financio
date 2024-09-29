@@ -3,16 +3,15 @@ import 'dart:async';
 import 'package:collection/collection.dart';
 
 import '/backend/schema/util/firestore_util.dart';
-import '/backend/schema/util/schema_util.dart';
 
 import 'index.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 
 class PairListsRecord extends FirestoreRecord {
   PairListsRecord._(
-    DocumentReference reference,
-    Map<String, dynamic> data,
-  ) : super(reference, data) {
+    super.reference,
+    super.data,
+  ) {
     _initializeFields();
   }
 
@@ -86,6 +85,11 @@ class PairListsRecord extends FirestoreRecord {
   String get ask => _ask ?? '';
   bool hasAsk() => _ask != null;
 
+  // "daily" field.
+  String? _daily;
+  String get daily => _daily ?? '';
+  bool hasDaily() => _daily != null;
+
   void _initializeFields() {
     _name = snapshotData['name'] as String?;
     _description = snapshotData['description'] as String?;
@@ -101,6 +105,7 @@ class PairListsRecord extends FirestoreRecord {
     _digits = castToType<int>(snapshotData['digits']);
     _bid = snapshotData['bid'] as String?;
     _ask = snapshotData['ask'] as String?;
+    _daily = snapshotData['daily'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -152,6 +157,7 @@ Map<String, dynamic> createPairListsRecordData({
   int? digits,
   String? bid,
   String? ask,
+  String? daily,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -169,6 +175,7 @@ Map<String, dynamic> createPairListsRecordData({
       'digits': digits,
       'bid': bid,
       'ask': ask,
+      'daily': daily,
     }.withoutNulls,
   );
 
@@ -193,7 +200,8 @@ class PairListsRecordDocumentEquality implements Equality<PairListsRecord> {
         e1?.sortOrder == e2?.sortOrder &&
         e1?.digits == e2?.digits &&
         e1?.bid == e2?.bid &&
-        e1?.ask == e2?.ask;
+        e1?.ask == e2?.ask &&
+        e1?.daily == e2?.daily;
   }
 
   @override
@@ -211,7 +219,8 @@ class PairListsRecordDocumentEquality implements Equality<PairListsRecord> {
         e?.sortOrder,
         e?.digits,
         e?.bid,
-        e?.ask
+        e?.ask,
+        e?.daily
       ]);
 
   @override

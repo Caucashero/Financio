@@ -1,11 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:go_router/go_router.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
-import '/backend/backend.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
@@ -14,10 +10,7 @@ import '/backend/push_notifications/push_notifications_handler.dart'
 import '/index.dart';
 import '/main.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/lat_lng.dart';
-import '/flutter_flow/place.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'serialization_util.dart';
 
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
@@ -82,65 +75,73 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? NavBarPage() : AuthPageWidget(),
+          appStateNotifier.loggedIn ? const NavBarPage() : const AuthPageWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? NavBarPage() : AuthPageWidget(),
+              appStateNotifier.loggedIn ? const NavBarPage() : const AuthPageWidget(),
         ),
         FFRoute(
           name: 'AuthPage',
           path: '/authPage',
-          builder: (context, params) => AuthPageWidget(),
+          builder: (context, params) => const AuthPageWidget(),
         ),
         FFRoute(
           name: 'PairListPage',
           path: '/pairListPage',
-          builder: (context, params) => NavBarPage(
-            initialPage: '',
-            page: PairListPageWidget(
-              pair: params.getParam(
-                'pair',
-                ParamType.int,
-              ),
-              name: params.getParam(
-                'name',
-                ParamType.String,
-              ),
+          requireAuth: true,
+          builder: (context, params) => PairListPageWidget(
+            pair: params.getParam(
+              'pair',
+              ParamType.int,
+            ),
+            name: params.getParam(
+              'name',
+              ParamType.String,
             ),
           ),
         ),
         FFRoute(
-          name: 'PairCateogires',
-          path: '/pairCateogires',
+          name: 'PairCateogiresPage',
+          path: '/pairCateogiresPage',
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'PairCateogires')
-              : NavBarPage(
-                  initialPage: 'PairCateogires',
-                  page: PairCateogiresWidget(),
+              ? const NavBarPage(initialPage: 'PairCateogiresPage')
+              : const NavBarPage(
+                  initialPage: 'PairCateogiresPage',
+                  page: PairCateogiresPageWidget(),
                 ),
         ),
         FFRoute(
           name: 'Profile',
           path: '/profile',
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'Profile')
-              : NavBarPage(
+              ? const NavBarPage(initialPage: 'Profile')
+              : const NavBarPage(
                   initialPage: 'Profile',
                   page: ProfileWidget(),
                 ),
         ),
         FFRoute(
-          name: 'Dashboard',
-          path: '/dashboard',
+          name: 'DashboardPage',
+          path: '/dashboardPage',
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'Dashboard')
-              : NavBarPage(
-                  initialPage: 'Dashboard',
-                  page: DashboardWidget(),
+              ? const NavBarPage(initialPage: 'DashboardPage')
+              : const NavBarPage(
+                  initialPage: 'DashboardPage',
+                  page: DashboardPageWidget(),
                 ),
+        ),
+        FFRoute(
+          name: 'PairDetailPage',
+          path: '/pairDetailPage',
+          builder: (context, params) => PairDetailPageWidget(
+            slug: params.getParam(
+              'slug',
+              ParamType.String,
+            ),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -326,12 +327,13 @@ class FFRoute {
               : builder(context, ffParams);
           final child = appStateNotifier.loading
               ? Container(
-                  color: FlutterFlowTheme.of(context).primaryText,
+                  color: FlutterFlowTheme.of(context).primary,
                   child: Center(
                     child: Image.asset(
-                      'assets/images/favicon.svg',
-                      width: 300.0,
-                      fit: BoxFit.fill,
+                      'assets/images/Adsz_tasarm.png',
+                      width: 250.0,
+                      height: double.infinity,
+                      fit: BoxFit.contain,
                     ),
                   ),
                 )
@@ -377,7 +379,7 @@ class TransitionInfo {
   final Duration duration;
   final Alignment? alignment;
 
-  static TransitionInfo appDefault() => TransitionInfo(hasTransition: false);
+  static TransitionInfo appDefault() => const TransitionInfo(hasTransition: false);
 }
 
 class RootPageContext {

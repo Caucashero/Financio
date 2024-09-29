@@ -183,21 +183,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
-  // PairCateogires
+  // PairCateogiresPage
   {
     'my0539rt': {
-      'tr': 'Products',
+      'tr': 'Piyasa',
       'en': 'Products',
     },
   },
   // Profile
   {
-    'p5f1tejg': {
-      'tr': 'Financio',
-      'en': 'Financio',
-    },
     'rqo8jd9j': {
-      'tr': 'Switch to Dark Mode',
+      'tr': 'Karanlık & Aydınlık Mod',
       'en': 'Switch to Dark Mode',
     },
     'y3qnsqi9': {
@@ -221,15 +217,37 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Log Out',
     },
     '3xqfqc9d': {
-      'tr': 'Profile',
+      'tr': 'Profil',
       'en': 'Profile',
     },
   },
-  // Dashboard
+  // DashboardPage
   {
+    '9zl5ql8d': {
+      'tr': 'Financio',
+      'en': '',
+    },
     '3u3c30ua': {
       'tr': 'Home',
       'en': 'Home',
+    },
+  },
+  // PairDetailPage
+  {
+    'nizxevtl': {
+      'tr': 'Home',
+      'en': '',
+    },
+  },
+  // PairList
+  {
+    'n5v1inie': {
+      'tr': 'Satış',
+      'en': '',
+    },
+    '2zw59zz0': {
+      'tr': 'Alış',
+      'en': '',
     },
   },
   // Miscellaneous
