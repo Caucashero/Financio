@@ -1,4 +1,4 @@
-package com.financio.mobile
+package com.financio.mobilev2
 
 import io.flutter.embedding.android.FlutterActivity
 

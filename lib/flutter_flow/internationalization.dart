@@ -194,7 +194,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'rqo8jd9j': {
       'tr': 'Karanlık & Aydınlık Mod',
-      'en': 'Switch to Dark Mode',
+      'en': 'Dark & Light Mode',
     },
     'y3qnsqi9': {
       'tr': 'Switch to Light Mode',
@@ -209,8 +209,16 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Privacy Policy',
     },
     'm631y1ax': {
-      'tr': 'Yardım',
+      'tr': 'Bize Ulaşın',
       'en': 'Help',
+    },
+    '9ssr7ovs': {
+      'tr': 'Yasal Uyarı',
+      'en': '',
+    },
+    '2ifgeaxq': {
+      'tr': 'Canlı Destek',
+      'en': '',
     },
     'n6y68ipf': {
       'tr': 'Log Out',
@@ -239,6 +247,50 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
+  // GizlilikPolitikasi
+  {
+    'dnf5je5n': {
+      'tr': 'Gizlilik Politikası',
+      'en': '',
+    },
+    'duglqvc2': {
+      'tr': 'Home',
+      'en': '',
+    },
+  },
+  // Yardim
+  {
+    'esgwtsag': {
+      'tr': 'Yardim',
+      'en': '',
+    },
+    'gbpfc3gu': {
+      'tr': 'Home',
+      'en': '',
+    },
+  },
+  // YasalUyari
+  {
+    '9c1lm230': {
+      'tr': 'Yasal Uyarı',
+      'en': '',
+    },
+    'svfzapy9': {
+      'tr': 'Home',
+      'en': '',
+    },
+  },
+  // CanliDestek
+  {
+    '44r9je3u': {
+      'tr': 'Canlı Destek',
+      'en': '',
+    },
+    'sdtu9k0v': {
+      'tr': 'Home',
+      'en': '',
+    },
+  },
   // PairList
   {
     'n5v1inie': {
@@ -252,10 +304,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Miscellaneous
   {
-    'jvjx4wtm': {
-      'tr': 'Merhaba Size Bildirim Göndermek İstiyoruz.',
-      'en': 'Hello, We Want to Send You a Notification.',
-    },
     'ugyhoxfc': {
       'tr': 'Error ',
       'en': 'Error',

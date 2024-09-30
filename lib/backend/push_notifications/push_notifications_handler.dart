@@ -121,6 +121,26 @@ final parametersBuilderMap =
           'slug': getParameter<String>(data, 'slug'),
         },
       ),
+  'GizlilikPolitikasi': (data) async => ParameterData(
+        allParams: {
+          'slug': getParameter<String>(data, 'slug'),
+        },
+      ),
+  'Yardim': (data) async => ParameterData(
+        allParams: {
+          'slug': getParameter<String>(data, 'slug'),
+        },
+      ),
+  'YasalUyari': (data) async => ParameterData(
+        allParams: {
+          'slug': getParameter<String>(data, 'slug'),
+        },
+      ),
+  'CanliDestek': (data) async => ParameterData(
+        allParams: {
+          'slug': getParameter<String>(data, 'slug'),
+        },
+      ),
 };
 
 Map<String, dynamic> getInitialParameterData(Map<String, dynamic> data) {

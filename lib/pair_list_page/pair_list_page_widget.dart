@@ -107,6 +107,7 @@ class _PairListPageWidgetState extends State<PairListPageWidget> {
 
               return ListView.builder(
                 padding: EdgeInsets.zero,
+                primary: false,
                 shrinkWrap: true,
                 scrollDirection: Axis.vertical,
                 itemCount: listViewPairListsRecordList.length,

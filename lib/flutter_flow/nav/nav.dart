@@ -142,6 +142,46 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               ParamType.String,
             ),
           ),
+        ),
+        FFRoute(
+          name: 'GizlilikPolitikasi',
+          path: '/gizlilikPolitikasi',
+          builder: (context, params) => GizlilikPolitikasiWidget(
+            slug: params.getParam(
+              'slug',
+              ParamType.String,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: 'Yardim',
+          path: '/Yardim',
+          builder: (context, params) => YardimWidget(
+            slug: params.getParam(
+              'slug',
+              ParamType.String,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: 'YasalUyari',
+          path: '/YasalUyari',
+          builder: (context, params) => YasalUyariWidget(
+            slug: params.getParam(
+              'slug',
+              ParamType.String,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: 'CanliDestek',
+          path: '/CanliDestek',
+          builder: (context, params) => CanliDestekWidget(
+            slug: params.getParam(
+              'slug',
+              ParamType.String,
+            ),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

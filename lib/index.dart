@@ -7,3 +7,8 @@ export '/profile/profile_widget.dart' show ProfileWidget;
 export '/dashboard_page/dashboard_page_widget.dart' show DashboardPageWidget;
 export '/pair_detail_page/pair_detail_page_widget.dart'
     show PairDetailPageWidget;
+export '/gizlilik_politikasi/gizlilik_politikasi_widget.dart'
+    show GizlilikPolitikasiWidget;
+export '/yardim/yardim_widget.dart' show YardimWidget;
+export '/yasal_uyari/yasal_uyari_widget.dart' show YasalUyariWidget;
+export '/canli_destek/canli_destek_widget.dart' show CanliDestekWidget;

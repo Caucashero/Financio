@@ -33,7 +33,7 @@
             <string>Editor</string>
             <key>CFBundleURLSchemes</key>
             <array>
-                <string>com.googleusercontent.apps.521520622441-g7fga9lb0vdpfd9dljng2ftovdab49ju</string>
+                <string>com.googleusercontent.apps.521520622441-pe45jc7vrmnirab06pi4jnimkrfuhun8</string>
                 
             </array>
         </dict>
@@ -59,8 +59,7 @@
 	<true/>
 
 
-	<key>PermissionGroupNotification</key>
-    <string>Merhaba Size Bildirim Göndermek İstiyoruz.</string>
+
     <key>UIBackgroundModes</key>
     <array>
         <string>fetch</string>

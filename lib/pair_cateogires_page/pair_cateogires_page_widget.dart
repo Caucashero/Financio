@@ -99,6 +99,7 @@ class _PairCateogiresPageWidgetState extends State<PairCateogiresPageWidget> {
 
                   return ListView.builder(
                     padding: EdgeInsets.zero,
+                    primary: false,
                     shrinkWrap: true,
                     scrollDirection: Axis.vertical,
                     itemCount: listViewPairCategoriesRecordList.length,

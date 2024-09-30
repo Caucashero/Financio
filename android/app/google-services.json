@@ -48,6 +48,50 @@
           ]
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:521520622441:android:c2a593970c1c5976146bf8",
+        "android_client_info": {
+          "package_name": "com.financio.mobilev2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "521520622441-pog08anclcebf75tmbkvejtq3efjr5o3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.financio.mobilev2",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "521520622441-0nmo2b60qvc41asl2oqbgavh3cpsuhce.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkS6coLZD6-4Co6yEm-ZyQomZt4q0hffw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "521520622441-0nmo2b60qvc41asl2oqbgavh3cpsuhce.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "521520622441-g7fga9lb0vdpfd9dljng2ftovdab49ju.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.financio.mobile"
+              }
+            }
+          ]
+        }
+      }
     }
   ],
   "configuration_version": "1"
